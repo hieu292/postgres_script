@@ -28,7 +28,8 @@ select
     case when dollars is not null
     and dollars <> 0
     then round(100.0 * (dollars - last_week_dollars)/dollars, 2)
-    end as 'WoW %'
+    end
+    as "WoW %"
 from computed_data
 where date >= date :'start'
 order by date;
